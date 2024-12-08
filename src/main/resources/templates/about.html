@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> this is about about content</h1>
+    <hr/>
+    <div class="host-tag" 
+    th:replace="${isLogin} ? ~{base :: parent(~{::#id})} : ~{base :: test(~{::#id2})}">
+    <section id="id">
+        <p>user is logged in, valid account</p>
+        <button>click me</button>
+    </section>
+
+    <section id="id2">
+        <p>this is not valid account</p>
+    </section>
+</div> 
+   
+</body>
+</html>
